@@ -1,0 +1,91 @@
+*{
+	margin: 0px auto;
+	border: 0px auto;
+	box-sizing : border-box;
+}
+body{
+	background-color: blue;
+	width : 100%;
+	height : 100%;
+}
+.container{
+	width: 38%;
+	height : 90%;
+	background: #2e517d;
+	position: absolute;
+	left : 65%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	perspective: 160rem;
+}
+.cover, .one{
+	width: 95%;
+	height : 100%;
+	position : absolute;
+	left : 30px;
+    top: 0;
+	background-color: #345b8c;
+	transform: rotateY(0 deg);
+	transform-style: preserve-3d;
+	transform-origin: left;
+	transition: all .5s ease-in;
+}
+.cover{
+    z-index: 4;
+}
+.one{
+    z-index: 3;
+}
+.two{
+    z-index : 2;
+}
+.two{
+    z-index : 1;
+}
+.container:hover .cover{
+	transform : rotateY(-180deg);
+}
+.one:hover .two{
+	transform : rotateY(-180deg);
+}
+.cover:hover .one{
+	transform : rotateY(-180deg);
+}
+.cover:hover .one{
+	transform : rotateY(-180deg);
+}
+*/
+figure{
+	width : 100%;
+	height : 100%;
+	display : block;
+	position: absolute;
+	backface-visibility : hidden;
+}
+figure.front{
+	background: url(lbm.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+figure.back{
+	background-color: #d5d5d5;
+	transform: rotateY(180deg);
+}
+figure.oneFront{
+	background-color: black;
+}
+figure.oneBack{
+	background-color: #d5d5d5;
+	transform: rotateY(180deg);
+}
+figure.twoFront{
+	background-color: green;
+}
+figure.twoBack{
+	background-color: #d5d5d5;
+	transform: rotateY(180deg);
+}
+
+
+
